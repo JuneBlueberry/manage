@@ -9,9 +9,8 @@ var mysql = require('mysql');
 
 //连接数据库
 var conn = mysql.createConnection(models.mysql);
-conn.connect();
 
-// 向前台返回JSON方法的简单封装
+conn.connect();
 var jsonWrite = function (res, ret) {
   if(typeof ret === 'undefined') {
     res.json({

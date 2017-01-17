@@ -20,7 +20,7 @@
             <use xlink:href="#icon-jiantou"></use>
           </svg>
         </router-link>
-        <li>
+        <router-link tag="li" to="/Setting/opinion">
           <svg class="icon-setting-left" aria-hidden="true">
             <use xlink:href="#icon-yijianfankui"></use>
           </svg>
@@ -28,7 +28,7 @@
           <svg class="icon-setting-right" aria-hidden="true">
             <use xlink:href="#icon-jiantou"></use>
           </svg>
-        </li>
+        </router-link>
         <li>
           <svg class="icon-setting-left" aria-hidden="true">
             <use xlink:href="#icon-trash"></use>

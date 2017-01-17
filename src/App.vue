@@ -108,5 +108,4 @@ body{
    fill: #7D7D7D;
    overflow: hidden;
  }
-
 </style>

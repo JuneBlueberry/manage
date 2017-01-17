@@ -18,10 +18,13 @@ Vue.use(MuseUI)
 
 //路由vue视图配置
 import  Index from './components/Index.vue';
+
 import Setting from './components/Setting.vue';
-import Login from './components/Login.vue';
 import aboutSoft from './components/Setting/aboutSoft.vue';
 import  progress from './components/Setting/progress.vue';
+import opinion from './components/Setting/opinion.vue';
+
+import Login from './components/Login.vue';
 
 //路由配置
 const router = new VueRouter({
@@ -41,7 +44,10 @@ const router = new VueRouter({
       path : '/Setting/progress', component : progress,
     },
     {
-      path : '/Login', component : Login
+      path : '/Setting/opinion', component : opinion,
+    },
+    {
+      path : '/Login', component : Login,
     },
   ]
 })
@@ -53,35 +59,3 @@ const app1 = new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-var app = {
-// Application Constructor
-  initialize: function() {
-    this.bindEvents();
-  },
-// Bind Event Listeners
-//
-// Bind any events that are required on startup. Common events are:
-// 'load', 'deviceready', 'offline', and 'online'.
-  bindEvents: function() {
-    document.addEventListener('deviceready', this.onDeviceReady, false);
-  },
-// deviceready Event Handler
-//
-// The scope of 'this' is the event. In order to call the 'receivedEvent'
-// function, we must explicitly call 'app.receivedEvent(...);'
-  onDeviceReady: function() {
-    //app.receivedEvent('deviceready');
-    appRouter.start(App, 'app')
-    window.navigator.splashscreen.hide()
-  },
-// Update DOM on a Received Event
-  receivedEvent: function(id) {
-    var parentElement = document.getElementById(id);
-    var listeningElement = parentElement.querySelector('.listening');
-    var receivedElement = parentElement.querySelector('.received');
-    listeningElement.setAttribute('style', 'display:none;');
-    receivedElement.setAttribute('style', 'display:block;');
-    console.log('Received Event: ' + id);
-  }
-};
-app.initialize();

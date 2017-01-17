@@ -4,6 +4,18 @@
       <ul>
         <li>
           <div class="list-left">
+            <span>V 1.2</span>
+            <span>17-01-14</span>
+          </div>
+          <div class="list-right">
+            <h3>设置功能部分完成</h3>
+            <p>1.关于软件完成</p>
+            <p>2.更新公告完成</p>
+            <p>3.意见反馈前端完成</p>
+          </div>
+        </li>
+        <li>
+          <div class="list-left">
             <span>V 1.1</span>
             <span>17-01-05</span>
           </div>
@@ -16,8 +28,8 @@
         </li>
         <li>
           <div class="list-left">
-            <span>V 1.0</span>
-            <span>17-01-04</span>
+            <p>V 1.0</p>
+            <p>17-01-04</p>
           </div>
           <div class="list-right">
             <h3>环境搭建</h3>
@@ -32,12 +44,12 @@
 <style>
 #progress ul{
   width: 100%;
-  margin-top: 16%;
-  margin-bottom: 10%;
+  margin-top: 4.2rem;
+  margin-bottom: 3rem;
 }
 #progress ul li{
   width: 96%;
-  height: 6rem;
+  height: 6.4rem;
   border: 1px solid #8FCCE9;
   margin: 0.8rem auto;
 }
@@ -45,13 +57,12 @@
   width: 30%;
   height: 100%;
   float: left;
+  text-align: center;
+  padding-top: 2rem;
   background-color: #CDE8F6;
 }
 #progress .list-left span{
-  width: 100%;
   display: block;
-  text-align: center;
-  padding-top: 1.2rem;
 }
 #progress .list-right{
   width: 70%;
@@ -63,6 +74,7 @@
 }
 #progress .list-right p{
   width: 90%;
+  font-size: 1rem;;
   margin: 0 auto;
   text-overflow: ellipsis;  /*超过的字显示省略号*/
   white-space: nowrap;      /*强制换行*/
@@ -76,7 +88,7 @@
                 title:'更新公告'
             }
         },
-        components:{
+        components: {
 
         }
     }
