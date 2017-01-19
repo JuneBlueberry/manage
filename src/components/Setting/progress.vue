@@ -4,6 +4,17 @@
       <ul>
         <li>
           <div class="list-left">
+            <span>V 1.3</span>
+            <span>17-01-19</span>
+          </div>
+          <div class="list-right">
+            <h3></h3>
+            <p>1.新加入ElementUI组件</p>
+            <p>2.关于院系完成</p>
+          </div>
+        </li>
+        <li>
+          <div class="list-left">
             <span>V 1.2</span>
             <span>17-01-14</span>
           </div>

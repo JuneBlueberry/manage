@@ -16,8 +16,16 @@ import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
 Vue.use(MuseUI)
 
+//ElementUI组件
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+Vue.use(ElementUI)
+
+
 //路由vue视图配置
 import  Index from './components/Index.vue';
+import aboutSchool from './components/Index/aboutSchool.vue';
+import  aboutCollege from  './components/Index/aboutCollege.vue';
 
 import Setting from './components/Setting.vue';
 import aboutSoft from './components/Setting/aboutSoft.vue';
@@ -32,7 +40,13 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     {
-      path : '', component : Index
+      path : '', component : Index,
+    },
+    {
+      path : '/Index/aboutSchool', component : aboutSchool,
+    },
+    {
+      path : '/Index/aboutCollege',component : aboutCollege,
     },
     {
       path : '/Setting', component : Setting,

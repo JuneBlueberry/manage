@@ -41,6 +41,7 @@ export default {
 }
 </script>
 <script src="./assets/plugs/icon/iconfont.js"></script>
+
 <style>
 *{
   padding: 0;
@@ -57,12 +58,12 @@ body{
 }
 #header{
   width: 100%;
-  height: 8%;
+  height: 4rem;
   top: 0;
   color: #464646;
   position: fixed;
   font-size: 1.5rem;
-  padding-top: 0.8rem;
+  line-height: 4rem;
   text-align: center;
   color: #FFFFFF;
   background-color: #00BC8C;

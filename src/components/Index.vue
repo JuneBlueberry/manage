@@ -4,31 +4,31 @@
     <div class="head-pic"></div>
     <div class="list">
       <ul>
-        <li>
+        <router-link tag="li" to="/Index/aboutSchool">
           <svg class="icon-index" aria-hidden="true">
             <use xlink:href="#icon-school"></use>
           </svg>
           <p>学校简介</p>
-        </li>
-        <li>
+        </router-link>
+        <router-link tag="li" to="/Index/aboutCollege">
           <svg class="icon-index" aria-hidden="true">
             <use xlink:href="#icon-book-2"></use>
           </svg>
           <p>院系简介</p>
-        </li>
+        </router-link>
       </ul>
       <ul>
         <li>
           <svg class="icon-index" aria-hidden="true">
             <use xlink:href="#icon-desk"></use>
           </svg>
-          <p></p>
+          <p>师资简介</p>
         </li>
         <li>
           <svg class="icon-index" aria-hidden="true">
             <use xlink:href="#icon-abc"></use>
           </svg>
-          <p></p>
+          <p>校园文化</p>
         </li>
       </ul>
       <ul>
@@ -36,7 +36,7 @@
           <svg class="icon-index" aria-hidden="true">
             <use xlink:href="#icon-light-bulb"></use>
           </svg>
-          <p></p>
+          <p>图书资源</p>
         </li>
         <li>
           <svg class="icon-index" aria-hidden="true">
@@ -53,7 +53,7 @@
     width: 100%;
     height: 12rem;
     background-color: #AFAFAF;
-    margin: 14% 0 2% 0;
+    margin: 4rem 0 0.4rem 0;
   }
   #index .list{
     width: 100%;
