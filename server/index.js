@@ -4,7 +4,8 @@
 
 // 引入编写好的api
 const adminApi = require('./api/adminApi');
-const opinionApi = require('./api/opinionApi');
+const settingApi = require('./api/settingApi');
+const loginApi = require('./api/loginApi');
 
 
 // 引入文件模块
@@ -20,9 +21,23 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+//配置cors跨域
+var cors = require('cors');
+app.use(
+  cors(
+    {
+      origin : ['http://www.timoya.com'],
+      method : ['GET','POST'],
+      alloweHeaders:['Conten-Type', 'Authorization']
+    }
+  )
+);
+
+
 //后端api路由
 app.use('/api/admin',adminApi);
-app.use('/api/opinion',opinionApi);
+app.use('/api/setting',settingApi);
+app.use('/api/login',loginApi);
 
 
 // 访问静态资源文件 这里是访问所有dist目录下的静态资源文件
@@ -35,3 +50,5 @@ app.use('/api/opinion',opinionApi);
 // 监听3000端口
 app.listen(3000);
 console.log('success listen…………');
+
+module.exports = app;

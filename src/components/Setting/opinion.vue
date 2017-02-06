@@ -55,22 +55,42 @@
                   return;
               }else{
                   //添加意见反馈数据
-                this.$http.post('/api/opinion/addOpinion', {
+                this.$http.post('http://timoya.com:3000/api/setting/addOpinion', {
                     title : title,
                     mob : mob,
                     content : content
-                },{}).then((response) => {
+                },{
+                  headers: {
+                    //"Conten-Type":"http://localhost:3000/"
+                  },
+                  emulateJSON: true
+                }).then((response) => {
                     // 响应成功回调
                     console.log(response);
+                    if(response.body.affectedRows == "1"){
+                      this.submitSuccess();
+                      //提交成功后表单清空
+                      this.opinionTitle = '';
+                      this.opinionMob = '';
+                      this.opinionContent = '';
+                    }else{
+
+                    }
                 }, (response) => {
                     // 响应错误回调
                     console.log(response);
                 });
               }
           },
-        close(){
-            this.dialog = false
-        }
+          close(){
+              this.dialog = false
+          },
+          submitSuccess() {
+            this.$message({
+              message: '提交成功！',
+              type: 'success'
+            });
+          },
       }
   }
 </script>

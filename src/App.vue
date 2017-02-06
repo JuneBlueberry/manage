@@ -67,7 +67,6 @@ body{
   text-align: center;
   color: #FFFFFF;
   background-color: #00BC8C;
-  border-bottom: 1px solid #AFAFAF;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

@@ -1,5 +1,5 @@
 /**
- * Created by Abner on 2017/1/16.
+ * 登录API Created by Abner on 2017/1/20.
  */
 "use strict";
 var models = require('../db');
@@ -13,7 +13,7 @@ var conn = mysql.createConnection(models.mysql);
 
 conn.connect();
 var jsonWrite = function (res, ret) {
-  if(typeof ret === 'undefined') {
+  if(ret == 'error') {
     res.json({
       code:'1',
       msg: '操作失败'
@@ -23,21 +23,23 @@ var jsonWrite = function (res, ret) {
   }
 };
 
-// 创建账号接口
-router.post('/addOpinion',(req,res) => {
-  var sql= $sql.opinion.add;
+// 学生登录接口
+router.post('/studentLogin',(req,res) => {
+  var sql= $sql.login.studentLogin;
   var params = req.body;
   console.log(params);
-  conn.query(sql,[params.title,params.mob,params.content],function(err,result){
+  conn.query(sql,[params.username,params.password],function(err,result){
     if(err){
       console.log(err);
     }
     if(result) {
+      console.log(result);
       jsonWrite(res, result);
+    }else{
+      jsonWrite(res,'error');
     }
 
-    // 以json形式，把操作结果返回给前台页面
-    jsonWrite(res, result);
+
 
     // 释放连接
 

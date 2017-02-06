@@ -3,9 +3,13 @@
  */
 
 var sqlString = {
-  //意见反馈
-  opinion : {
-    add : 'insert into opinion(title,mob,content) value(?,?,?)',
+  //设置Sql
+  setting : {
+    addOpinion : 'insert into opinion(title,mob,content) value(?,?,?)',
+  },
+  //登录Sql
+  login : {
+    studentLogin : 'select count(*) from student where stuNumber=? and password=?',
   }
 }
 

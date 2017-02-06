@@ -1,7 +1,11 @@
 <template>
   <div id="index">
-    <div id="header">{{title}}</div>
-    <div class="head-pic"></div>
+    <div class="me" v-if="isLogin">
+      <div></div>
+    </div>
+    <div class="me" v-else>
+      Not sorry
+    </div>
     <div class="list">
       <ul>
         <router-link tag="li" to="/Index/aboutSchool">
@@ -49,11 +53,11 @@
   </div>
 </template>
 <style>
-  #index .head-pic{
+  #index .me{
     width: 100%;
-    height: 12rem;
-    background-color: #AFAFAF;
-    margin: 4rem 0 0.4rem 0;
+    height: 16rem;
+    background-color: #00BC8C;
+    border-bottom: 0.6rem solid #F4F3F1;
   }
   #index .list{
     width: 100%;
@@ -91,7 +95,8 @@
     export default{
         data(){
             return{
-                title:'主页'
+                title:'主页',
+                isLogin : true
             }
         },
         components:{

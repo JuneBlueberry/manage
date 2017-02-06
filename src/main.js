@@ -43,6 +43,9 @@ const router = new VueRouter({
       path : '', component : Index,
     },
     {
+      path : '/manage', component : Index,    //在第一次访问时显示主页面
+    },
+    {
       path : '/Index/aboutSchool', component : aboutSchool,
     },
     {

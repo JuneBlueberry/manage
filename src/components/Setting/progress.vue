@@ -4,11 +4,23 @@
       <ul>
         <li>
           <div class="list-left">
+            <span>V 2.0</span>
+            <span>17-02-06</span>
+          </div>
+          <div class="list-right">
+            <h3>服务器部署完成</h3>
+            <p>1.解决vue访问跨域问题</p>
+            <p>2.vue和node数据交互打通</p>
+            <p>3.意见反馈功能完成</p>
+          </div>
+        </li>
+        <li>
+          <div class="list-left">
             <span>V 1.3</span>
             <span>17-01-19</span>
           </div>
           <div class="list-right">
-            <h3></h3>
+            <h3>关于院系功能上线</h3>
             <p>1.新加入ElementUI组件</p>
             <p>2.关于院系完成</p>
           </div>

@@ -24,7 +24,7 @@ var jsonWrite = function (res, ret) {
 
 // 创建账号接口
 router.get('/login/addUser',(req,res) => {
-  
+  console.log('测试成功');
 });
 
 module.exports = router;
