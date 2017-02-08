@@ -5,9 +5,6 @@ import App from './App'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 
-//引入配置文件
-import './assets/js/config'
-
 //开启debug模式
 Vue.config.debug = true;
 
