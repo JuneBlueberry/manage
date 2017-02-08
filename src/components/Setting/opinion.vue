@@ -55,7 +55,7 @@
                   return;
               }else{
                   //添加意见反馈数据
-                this.$http.post('http://timoya.com:3000/api/setting/addOpinion', {
+                this.$http.post(APIURL+'/manage/api/setting/addOpinion', {
                     title : title,
                     mob : mob,
                     content : content
